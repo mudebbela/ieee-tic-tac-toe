@@ -22,11 +22,11 @@ is part of the total Tic-Tac-Toe program.
 First go to http://www.github.com/moorepants/ieee-tic-tac-toe and press the
 "Fork" button in the top right of the window. This will copy my git repository
 to your Github account. You should now see a repository at
-http://www.github.com/<your-username>/ieee-tic-tac-toe.
+http://www.github.com/your-username/ieee-tic-tac-toe.
 
 Now you need to copy your Fork down to your computer using the git clone
 command so you can edit the files on your computer. Open a terminal window (or
-Git bash)
+Git bash) and type:
 
 ```bash
 $ git clone https://github.com/<your-username>/ieee-tic-tac-toe.git
@@ -37,13 +37,13 @@ $ git clone https://github.com/<your-username>/ieee-tic-tac-toe.git
 This creates a new directory in the current working directory. Now change
 directory into the repository.
 
-```bashsession
+```bash
 $ cd ieee-tic-tac-toe
 ```
 
 Make a branch to contain your work:
 
-```bashsession
+```bash
 $ git branch my_branch
 $ git checkout my_branch
 ```
@@ -58,18 +58,18 @@ To check if your function passes the test you can import the test function for
 your function in the Python interpreter and run the test. This shows how to
 test the `print_board` function.
 
-```bashsession
+```bash
 $ python
 ```
 
-```pythonconsole
+```python
 >>> from test_tic_tac_toe import test_print_board
 >>> test_print_board()
 ```
 
 You can also run all the tests from the terminal with:
 
-```bashsession
+```bash
 $ python test_tic_tac_toe.py
 ```
 
@@ -94,7 +94,7 @@ Once you have the function working as desired then you should commit your
 changes to git on your computer, for example to commit the changes to the
 `tic_tac_toe.py` file:
 
-```bashsession
+```bash
 $ git commit tic_tac_toe.py -m "Implemented the XXXXX function, test passes."
 ```
 
@@ -102,7 +102,7 @@ Now that you've committed the changes to your branch on your computer you can
 send them up to Github so that we can get the change merged into the main
 repository:
 
-```bashsession
+```bash
 $ git push origin my_branch
 ```
 
@@ -122,20 +122,20 @@ Getting changes other people made to the repository
 First make sure you are on the master branch. We will use the master branch of
 your fork on your computer to manage pull in changes from the main repository.
 
-```bashsession
+```bash
 $ git checkout master
 ```
 
 Now we will add a remote repository URL so that you can connect to the main
 repository and pull changes from that.
 
-```bashsession
+```bash
 $ git remote add main_repo https://github.com/moorepants/ieee-tic-tac-toe.git
 ```
 
 Now you can use the ``git pull`` command to bring down the changes:
 
-```bashsession
+```bash
 $ git pull main_repo master
 ```
 
