@@ -12,17 +12,17 @@ def test_print_board():
              None, None, None,
              None, None, None]
 
-    expected = ("   |   |   \n"
-                " 1 | 2 | 3 \n"
-                "   |   |   \n"
-                "-----------\n"
-                "   |   |   \n"
-                " 4 | 5 | 6 \n"
-                "   |   |   \n"
-                "-----------\n"
-                "   |   |   \n"
-                " 7 | 8 | 9 \n"
-                "   |   |   \n")
+    expected = ("     |     |     \n"
+                "  1  |  2  |  3  \n"
+                "     |     |     \n"
+                "-----------------\n"
+                "     |     |     \n"
+                "  4  |  5  |  6  \n"
+                "     |     |     \n"
+                "-----------------\n"
+                "     |     |     \n"
+                "  7  |  8  |  9  \n"
+                "     |     |     \n")
 
     result = print_board(board)
 
@@ -32,17 +32,17 @@ def test_print_board():
              'x', None, None,
              'o', None, 'x']
 
-    expected = ("   |   |   \n"
-                " O | 2 | O \n"
-                "   |   |   \n"
-                "-----------\n"
-                "   |   |   \n"
-                " X | 5 | 6 \n"
-                "   |   |   \n"
-                "-----------\n"
-                "   |   |   \n"
-                " O | 8 | X \n"
-                "   |   |   \n")
+    expected = ("     |     |     \n"
+                "  O  |  2  |  O  \n"
+                "     |     |     \n"
+                "-----------------\n"
+                "     |     |     \n"
+                "  X  |  5  |  6  \n"
+                "     |     |     \n"
+                "-----------------\n"
+                "     |     |     \n"
+                "  O  |  8  |  X  \n"
+                "     |     |     \n")
 
     result = print_board(board)
 
