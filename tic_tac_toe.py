@@ -79,6 +79,44 @@ def is_board_full(board):
 
 
 def main():
+	game_on = true
+	while game_on==true:
+		game_board= [None, None, None,
+					 None, None, None,
+					 None, None, None,]
+					 
+		user_token = get_player_token_choice()
+		if user_token == 'x':
+			computer_token = 'o'
+		else:
+			computer_token = 'x'
+		
+		game_over= false
+		position = 0
+		print_board(game_board)
+		
+		current_move = who_goes_first()
+		
+		while (game_over== false):
+			
+			
+			if current_move == user_token:
+				position =get_player_move()
+				game_board[position] = user_token
+				current_move = computer_token
+			else:
+				position =get_computer_move()
+				game_board[position]= computer_token
+				current_move = user_token
+			print_board(game_board)
+			game_status=is_there_a_win(game_board)
+			
+			
+			if game_status = 'no':
+				game_over= false
+			else :
+				print("the winner is{}".format(game_status))
+		game_on = get_play_again()
     """Starts the main game loop."""
 
     # main() should implement a while loop that runs through the game
